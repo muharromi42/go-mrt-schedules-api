@@ -52,7 +52,7 @@ func (s *service) GetAllStation() (response []StationResponse, err error){
 	return 
 }
 
-func (s *service) CheckSchedulesByStation() (response []ScheduleResponse, err error){
+func (s *service) CheckSchedulesByStation(id string) (response []ScheduleResponse, err error){
 	url := "https://jakartamrt.co.id/id/val/stasiuns"
 
 		// hit url
@@ -126,7 +126,7 @@ func ConvertDataToResponses(schedule Schedule) (response []ScheduleResponse, err
 			})
 		}
 	}
-	
+
 	return
 }
 
